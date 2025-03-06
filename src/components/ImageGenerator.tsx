@@ -87,7 +87,7 @@ const ImageGenerator = () => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        const img = new Image(0, 0);
+        const img = document.createElement('img');
         img.onload = () => {
           // Set width and height to match the uploaded image
           setWidth(img.width);
